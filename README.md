@@ -112,9 +112,9 @@ bash generate_large_skew_dataset.sh
 
 在数据倾斜的时候，两者性能差距非常大。
 
-groupByKey 平均时间 5m32s
+`groupByKey`  + `Map`  平均时间 5m32s
 
-reduceByKey + Map 平均时间 1m13s
+`reduceByKey`平均时间 1m13s
 
 ### groupByKey
 ![](experiment_data/groupByKey/io_stat_skew.png)
