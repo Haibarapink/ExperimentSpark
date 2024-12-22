@@ -7,7 +7,10 @@ sc = spark.sparkContext
 small_dataset = "/input/dataset.txt"
 large_dataset = "/input/large_dataset.txt"
 super_large_dataset = "/input/super_large_dataset.txt"
-lines = sc.textFile(large_dataset)
+
+large_skew_dataset = "/input/large_skew_dataset.txt"
+
+lines = sc.textFile(large_skew_dataset)
 words = lines.flatMap(lambda line: line.split(" "))
 wordPairs = words.map(lambda word: (word, 1))
 wordCounts = wordPairs.reduceByKey(lambda acc, count1: acc + count1)

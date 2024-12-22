@@ -76,4 +76,17 @@ pyspark
 会出现部分输出如下
 ![](imgs/pyspark.png)
 # 实验设计
-实现两个相同功能的程序，一个使用`reduceByKey`实现，另外一个使用`groupByKey`实现，都运行相同的数据集，对比性能差异，使用`monitor`文件夹中程序动态观测程序运行时产生的读写I/O大小和spark UI来观测两个程序之间产生的性能差异，分析其背后产生差异的原因。
+实现两个相同功能的程序，一个使用`reduceByKey`实现，另外一个使用`groupByKey`实现，都运行相同的数据集，对比性能差异，使用`monitor`文件夹中程序动态观测程序运行时产生的读写I/O大小和spark UI来观测两个程序之间产生的性能差异，分析其背后产生差异的原因, 设计实验来验证是否猜想是否正确。
+
+## 观测性能差异
+
+
+## 造成差异的原因
+
+
+## 设计实验验证猜想
+设计了一个倾斜的数据集合，在`dataset`下，用下面命令生成
+```
+python3 generate_skew_dataset.py
+bash generate_large_skew_dataset.sh
+```
