@@ -1,0 +1,1 @@
+spark-submit --master local[4] --deploy-mode client  ./src/groupByKeyExample.py

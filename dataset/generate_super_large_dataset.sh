@@ -7,7 +7,7 @@ fi
 
 bash ./generate_large_dataset.sh
 
-for ((i = 1; i <= 1024; i++)); do
+for ((i = 1; i <= 2; i++)); do
     cat large_dataset.txt >> super_large_dataset.txt
 done
 
